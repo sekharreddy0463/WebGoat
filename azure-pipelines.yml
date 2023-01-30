@@ -30,13 +30,13 @@ steps:
           dockerVersion: '17.09.0-ce'
 - task: CmdLine@2
   inputs:
-    script: 'docker pull nginx'
+    script: 'docker pull java:8'
       
 - task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'sekharreddy04631'
     testType: 'container'
-    dockerImageName: 'nginx'
+    dockerImageName: 'java:8'
     monitorWhen: 'always'
     failOnIssues: false
     projectName: 'sekharreddy0463'
