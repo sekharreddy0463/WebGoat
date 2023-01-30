@@ -25,3 +25,13 @@ steps:
       failOnIssues: false
       projectName: 'sekharreddy0463'
       organization: 'sekharreddy0463'
+      
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'sekharreddy04631'
+    testType: 'container'
+    dockerImageName: 'New_image'
+    monitorWhen: 'always'
+    failOnIssues: false
+    projectName: 'sekharreddy0463'
+    organization: 'sekharreddy0463'
