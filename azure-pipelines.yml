@@ -30,13 +30,13 @@ steps:
           dockerVersion: '17.09.0-ce'
 - task: CmdLine@2
   inputs:
-    script: 'docker pull java:8'
+    script: 'docker pull chandra635313/spring-boot-mongo'
       
 - task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'sekharreddy04631'
     testType: 'container'
-    dockerImageName: 'java:8'
+    dockerImageName: 'chandra635313/spring-boot-mongo'
     monitorWhen: 'always'
     failOnIssues: false
     projectName: 'sekharreddy0463'
